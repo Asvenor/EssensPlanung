@@ -10,71 +10,81 @@
 <body>
     
     <h1>Essens Planung</h1>
-    <div>
-        <label for="Gemüse">Gemüse</label>
-            <select name="Gemüse" id="Gemüse">
-                <option value="Peperoni">Peperoni</option>
-                <option value="Brokkoli">Brokkoli</option>
-                <option value="Tomaten">Tomaten</option>
-                <option value="Karotten">Karotten</option>
-                <option value="Lauch">Lauch</option>
-                <option value="Zucchini">Zucchini</option>
-                <option value="Zwiebeln">Zwiebeln</option>
-                <option value="Knoblauch">Knoblauch</option>
-                <option value="Kartoffeln">Kartoffeln</option>
-                <option value="Gurke">Gurke</option>
+    <div class="Main-Select">
+        <div class="Second-Select">
+            <label for="Gemüse">Gemüse</label>
+                <select name="Gemüse" id="Gemüse">
+                    <option value="Peperoni">Peperoni</option>
+                    <option value="Brokkoli">Brokkoli</option>
+                    <option value="Tomaten">Tomaten</option>
+                    <option value="Karotten">Karotten</option>
+                    <option value="Lauch">Lauch</option>
+                    <option value="Zucchini">Zucchini</option>
+                    <option value="Zwiebeln">Zwiebeln</option>
+                    <option value="Knoblauch">Knoblauch</option>
+                    <option value="Kartoffeln">Kartoffeln</option>
+                    <option value="Gurke">Gurke</option>
+                </select>
+        </div>
+        <div class="Second-Select">
+            <label for="Kohlenhydrate">Kohlenhydrate</label>
+                <select name="Kohlenhydrate" id="Kohlenhydrate">
+                    <option value="Nudeln">Nudeln</option>
+                    <option value="Reis">Reis</option>
+                </select>
+        </div>
+        <div class="Second-Select">
+            <label for="Snacks">Snacks</label>
+                <select name="Snacks" id="Snacks">
+                    <option value="Brezel">Brezel</option>
+                    <option value="Salzstangen">Salzstangen</option>
+                    <option value="Chips">Chips</option>
+                    <option value="Gummibärchen">Gummibärchen</option>
+                </select>
+        </div>
+        <div class="Second-Select">
+            <label for="Milch-Proteine">Milch & Proteine</label>
+                <select name="Milch-Proteine" id="Milch-Proteine">
+                    <option value="Milch">Milch</option>
+                    <option value="Eier">Eier</option>
+                    <option value="Joghurt">Joghurt</option>
+                    <option value="Reibkäse">Reibkäse</option>
+                </select>
+        </div>
+        <div class="Second-Select">
+            <label for="Tiefkühlsachen">Tiefkühlsachen</label>
+                <select name="Tiefkühlsachen" id="Tiefkühlsachen">
+                    <option value="Pizza">Pizza</option>
+                    <option value="Nuggets">Nuggets</option>
+                    <option value="Gemüse">Gemüse</option>
+                    <option value="Pommes">Pommes</option>
+                </select>
+        </div>
+        <div class="Second-Select">
+            <button type="submit" id="addItem">Add</button>
+        </div>
+    </div>    
+        <div class="Anzahl-Select">
+            <label for="Anzahl">Anzahl</label>
+            <select name="Anzahl" id="Anzahl">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
             </select>
-    </div>
-    <div>
-        <label for="Kohlenhydrate">Kohlenhydrate</label>
-            <select name="Kohlenhydrate" id="Kohlenhydrate">
-                <option value="Nudeln">Nudeln</option>
-                <option value="Reis">Reis</option>
-            </select>
-    </div>
-    <div>
-        <label for="Snacks">Snacks</label>
-            <select name="Snacks" id="Snacks">
-                <option value="Brezel">Brezel</option>
-                <option value="Salzstangen">Salzstangen</option>
-                <option value="Chips">Chips</option>
-                <option value="Gummibärchen">Gummibärchen</option>
-            </select>
-    </div>
-    <div>
-        <label for="Milch-Proteine">Milch & Proteine</label>
-            <select name="Milch-Proteine" id="Milch-Proteine">
-                <option value="Milch">Milch</option>
-                <option value="Eier">Eier</option>
-                <option value="Joghurt">Joghurt</option>
-                <option value="Reibkäse">Reibkäse</option>
-            </select>
-    </div>
-    <div>
-        <label for="Tiefkühlsachen">Tiefkühlsachen</label>
-            <select name="Tiefkühlsachen" id="Tiefkühlsachen">
-                <option value="Pizza">Pizza</option>
-                <option value="Nuggets">Nuggets</option>
-                <option value="Gemüse">Gemüse</option>
-                <option value="Pommes">Pommes</option>
-            </select>
-    </div>
+        </div>
 
-    <div>
-        <label for="Anzahl">Anzahl</label>
-        <select name="Anzahl" id="Anzahl">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-    </div>
+        <div class="Summary">
+
+            <p id="outputSummary"></p>
+        </div>
+    
 
     <script src="script.js"></script>
 </body>
