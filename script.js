@@ -12,21 +12,21 @@ const outputGemüseCheck = document.getElementById('outputGemüseCheck')
 //Varibles for the checkbox feature
 const checkBoxGemüse = document.getElementById('checkGemüse');
 
-
-
-//Gemüse Checkbos Event lister
-checkBoxGemüse.addEventListener('click', ()=>{
-    
-    if(checkBoxGemüse.checked === true) {
+//Checkbox Funtion test
+function checkGemüseBox() {
+        if(checkBoxGemüse.checked === true) {
         outputGemüseCheck.innerText = 'Selected'
-        return 'available'
 
     } else {
         outputGemüseCheck.innerText = 'Unselected'
-        return 'unavailable'
 
     }
-})
+
+}
+
+checkGemüseBox();
+//Gemüse Checkbos Event lister
+checkBoxGemüse.addEventListener('change', (checkGemüseBox));
 
 
 
