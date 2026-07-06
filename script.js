@@ -20,6 +20,8 @@ const checkBoxSnacks = document.getElementById('checkSnacks');
 const checkBoxMilchProteine = document.getElementById('checkMilchProteine');
 const checkBoxTiefkühlsachen = document.getElementById('checkTiefkühlsachen');
 
+let summaryList = []
+
 
 //Checkbox Funtions
 function disabledSelect(select, event) {
@@ -68,6 +70,19 @@ const snacks = getSnacks.value
 const milchproteine = getMilchProteine.value
 const tiefkühlsachen = getTiefkühlsachen.value
 
+function addChekedSelect(checkbox, select) {
+    if(checkbox.checked) {
+        summaryList.push(select.value)
+        outputSummary.innerText = summaryList.join(', ')
+    }
+}
 
 
 
+addItem.addEventListener('click', ()=> {
+    addChekedSelect(checkBoxGemüse, getGemüse)
+    addChekedSelect(checkBoxKohlenhydrate, getKohlenhydrate)
+    addChekedSelect(checkBoxSnacks, getSnacks)
+    addChekedSelect(checkBoxMilchProteine, getMilchProteine)
+    addChekedSelect(checkBoxTiefkühlsachen, getTiefkühlsachen)
+})
