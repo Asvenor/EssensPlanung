@@ -1,5 +1,6 @@
 .Main-Select {
-    border: 1px solid black;
+    border: 3px solid black;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 700px;
@@ -16,7 +17,8 @@
 }
 
 .Anzahl-Select {
-    border: 1px solid black;
+    border: 3px solid black;
+    border-radius: 15px;
     margin: 5px auto;
     padding: 5px 5px;
     text-align: center;
@@ -25,19 +27,22 @@
 }
 
 .Summary {
-    border: 1px black solid;
+    border: 3px black solid;
+    border-radius: 15px;
     max-width: 710px;
     margin: 5px auto;
     height: 300px;
 }
 
 .checkBoxSection {
-    border: 1px solid black;
+    border: 3px solid black;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 700px;
     margin: 5px auto;
     padding: 5px 5px;
+    
 
 }
 

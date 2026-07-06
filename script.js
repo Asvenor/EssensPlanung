@@ -9,38 +9,65 @@ const addItem = document.getElementById('addItem');
 //Variables for the output
 const outputSummary = document.getElementById('outputSummary')
 const outputGemüseCheck = document.getElementById('outputGemüseCheck')
+const outputKohlenhydrateCheck = document.getElementById('outputKohlenhydrateCheck')
+const outputSnacksCheck = document.getElementById('outputSnacksCheck')
+const outputMilchProteinCheck = document.getElementById('outputMilchProteinCheck')
+const outputTiefkühlsachenCheck = document.getElementById('outputTiefkühlsachenCheck')
 //Varibles for the checkbox feature
 const checkBoxGemüse = document.getElementById('checkGemüse');
+const checkBoxKohlenhydrate = document.getElementById('checkKohlenhydrate');
+const checkBoxSnacks = document.getElementById('checkSnacks');
+const checkBoxMilchProteine = document.getElementById('checkMilchProteine');
+const checkBoxTiefkühlsachen = document.getElementById('checkTiefkühlsachen');
 
-//Checkbox Funtion test
-function checkGemüseBox() {
-        if(checkBoxGemüse.checked === true) {
-        outputGemüseCheck.innerText = 'Selected'
 
-    } else {
-        outputGemüseCheck.innerText = 'Unselected'
-
-    }
-
+//Checkbox Funtions
+function disabledSelect(select, event) {
+    select.disabled = !event.target.checked;
 }
 
-checkGemüseBox();
-//Gemüse Checkbos Event lister
-checkBoxGemüse.addEventListener('change', (checkGemüseBox));
-
-
-
-//Add Button Event Lister
-addItem.addEventListener('click', ()=>{
-
-    if(checkBoxGemüse.checked === false){
-        console.log('Unchecked')
+function loadUpUpdate(checkbox, select) {
+    if(checkbox.checked === false) {
+        select.disabled = true;
     } else {
-        console.log('Checked')
+        select.disabled = false;
     }
+}
+
+loadUpUpdate(checkBoxGemüse, getGemüse);
+loadUpUpdate(checkBoxKohlenhydrate, getKohlenhydrate);
+loadUpUpdate(checkBoxSnacks, getSnacks);
+loadUpUpdate(checkBoxMilchProteine, getMilchProteine);
+loadUpUpdate(checkBoxTiefkühlsachen, getTiefkühlsachen);
 
 
-    const gemüse = getGemüse.value
+//Event Listers for Checkboxes to disabled Select
+checkBoxGemüse.addEventListener('change', () => {
+    disabledSelect(getGemüse, event)
+})
 
-    outputSummary.innerText = gemüse
-});
+checkBoxKohlenhydrate.addEventListener('change', () => {
+    disabledSelect(getKohlenhydrate, event)
+})
+
+checkBoxSnacks.addEventListener('change', () => {
+    disabledSelect(getSnacks, event)
+})
+
+checkBoxMilchProteine.addEventListener('change', () => {
+    disabledSelect(getMilchProteine, event)
+})
+
+checkBoxTiefkühlsachen.addEventListener('change', () => {
+    disabledSelect(getTiefkühlsachen, event)
+})
+
+const gemüse = getGemüse.value
+const kohlenhydrate = getKohlenhydrate.value
+const snacks = getSnacks.value
+const milchproteine = getMilchProteine.value
+const tiefkühlsachen = getTiefkühlsachen.value
+
+
+
+
