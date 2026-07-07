@@ -5,8 +5,12 @@ const getSnacks = document.getElementById('Snacks');
 const getMilchProteine = document.getElementById('Milch-Proteine');
 const getTiefkühlsachen = document.getElementById('Tiefkühlsachen');
 //Variable for the button
+const deleteLast = document.getElementById('deleteLast')
+const clearAll = document.getElementById('clearAll')
+const createList = document.getElementById('createList')
 const addItem = document.getElementById('addItem');
 //Variables for the output
+const outputfinallist = document.getElementById('finalList')
 const outputSummary = document.getElementById('outputSummary')
 const outputGemüseCheck = document.getElementById('outputGemüseCheck')
 const outputKohlenhydrateCheck = document.getElementById('outputKohlenhydrateCheck')
@@ -85,4 +89,19 @@ addItem.addEventListener('click', ()=> {
     addChekedSelect(checkBoxSnacks, getSnacks)
     addChekedSelect(checkBoxMilchProteine, getMilchProteine)
     addChekedSelect(checkBoxTiefkühlsachen, getTiefkühlsachen)
+})
+
+
+clearAll.addEventListener('click', () => {
+    summaryList = []
+    outputSummary.innerText = summaryList.join()
+})
+
+deleteLast.addEventListener('click', () => {
+    summaryList.pop()
+    outputSummary.innerText = summaryList.join()
+})
+
+createList.addEventListener('click', ()=>{
+    outputfinallist.innerText = summaryList.join('\n')
 })
